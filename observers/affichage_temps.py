@@ -16,7 +16,7 @@ class AffichageTemps(Observateur):
         temps = sujet.get_donnees()
         temps_restant = temps["Temps restant"]
         minutes = temps_restant // 60
-        secondes = temps_restant  % 60
-        self.label.config(text=f"{minutes:02d}:{secondes:02d}")
-        
+        secondes = temps_restant % 60
+        self._label.config(text=f"{minutes:02d}:{secondes:02d}")
+
 

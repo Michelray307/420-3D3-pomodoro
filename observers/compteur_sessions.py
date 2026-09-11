@@ -11,11 +11,11 @@ class CompteurSessions(Observateur):
             font=("Arial", 12)
         )
         self._label.pack(pady=5)
-    
+
     def actualiser(self, sujet) -> None:
         # À compléter :
         # Récupérez sessions_completees depuis sujet.get_donnees()
         # Mettez à jour le label
-        session = sujet.get_donnes()
+        session = sujet.get_donnees()
         session_complete = session["session complété"]
-        self.label.config(sessions_completees=f"Sessions complétées : {session_complete}")
+        self._label.config(text=f"Sessions complétées : {session_complete}")

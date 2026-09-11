@@ -13,13 +13,12 @@ class BarreProgression(Observateur):
         # Récupérez temps_restant et duree_totale depuis sujet.get_donnees()
         # Calculez la largeur proportionnelle (300 * temps_restant / duree_totale)
         # Effacez le canvas et dessinez le rectangle
-        temps = sujet.get_donnees()
-        duree = sujet.get_donnees()
-        duree_totale = duree["durée totale"]
-        temps_restant = temps["Temps restant"]
+        donnees = sujet.get_donnees()
+        duree_totale = donnees["durée totale"]
+        temps_restant = donnees["Temps restant"]
         largeur = int(300 * temps_restant / duree_totale)
         self._canvas.delete("all")
-        self.canvas.create_rectangle(0, 0, largeur, 20, fill="green", outline="")
+        self._canvas.create_rectangle(0, 0, largeur, 20, fill="green", outline="")
 
 
 

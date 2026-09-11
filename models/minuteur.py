@@ -23,7 +23,7 @@ class Minuteur(Sujet):
         if self._temps_restant > 0:
             self._temps_restant -= 1
         else:
-            self._changer_etat(self)
+            self._changer_etat()
 
         self.notifier()
         
@@ -57,7 +57,7 @@ class Minuteur(Sujet):
         self._temps_restant = DUREE_TRAVAIL
         self._etat = "Travail"
         self._sessions_completees = 0
-        self.notifier
+        self.notifier()
         
 
     def get_donnees(self) -> dict:

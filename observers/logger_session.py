@@ -14,7 +14,7 @@ class LoggerSession(Observateur):
         # Écrivez dans le fichier SEULEMENT si une nouvelle session est complétée
         # (comparez avec self._derniere_session)
         # Mettez à jour self._derniere_session
-        session = sujet.get_donnes()
+        session = sujet.get_donnees()
         session_complete = session["session complété"]
         if session_complete > self._derniere_session:
             with open(self._chemin, "a") as f:
